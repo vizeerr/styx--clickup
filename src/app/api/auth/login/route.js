@@ -1,6 +1,6 @@
 
-import { connect } from "@/lib/database/dbConfig";
 
+import { connect } from "@/lib/database/dbConfig";
 import User from "@/lib/database/models/userModels";
 import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken';
