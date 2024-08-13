@@ -1,7 +1,7 @@
 import { connect } from "@/lib/database/dbConfig";
 import User from "@/lib/database/models/userModels";
 import { getUserToken } from "@/lib/getUserToken";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 connect();
 

@@ -7,7 +7,7 @@ connect();
 
 export async function GET() {
     try {
-        const user = await User.find()
+        const user = await User.find().select("-password")
         if(!user){
             return NextResponse.json({
                 message:"No Users To Show",

@@ -56,7 +56,7 @@ const TaskAccords = () => {
       )}
 
       {getFilteredTasks("in progress").length > 0 && (
-        <Accordion className="mb-4" type="single" collapsible>
+        <Accordion className="mb-4" type="single" collapsible defaultValue="in-progress">
           <AccordionItem className="border-none" value="in-progress">
             <div className="flex items-center gap-5">
               <AccordionTrigger className="text-sm hover:text-red-500" />
@@ -73,7 +73,7 @@ const TaskAccords = () => {
       )}
 
       {getFilteredTasks("completed").length > 0 && (
-        <Accordion className="mb-4" type="single" collapsible>
+        <Accordion className="mb-4" type="single" collapsible defaultValue="completed">
           <AccordionItem className="border-none" value="completed">
             <div className="flex items-center gap-5">
               <AccordionTrigger className="text-sm" />
@@ -90,7 +90,7 @@ const TaskAccords = () => {
       )}
 
       {getFilteredTasks("canceled").length > 0 && (
-        <Accordion className="mb-4" type="single" collapsible>
+        <Accordion className="mb-4" type="single" collapsible defaultValue="canceled">
           <AccordionItem className="border-none" value="canceled">
             <div className="flex items-center gap-5">
               <AccordionTrigger className="text-sm hover:text-red-500" />
@@ -107,7 +107,7 @@ const TaskAccords = () => {
       )}
 
       {getFilteredTasks("backlog").length > 0 && (
-        <Accordion className="mb-4" type="single" collapsible>
+        <Accordion className="mb-4" type="single" collapsible defaultValue="backlog">
           <AccordionItem className="border-none" value="backlog">
             <div className="flex items-center gap-5">
               <AccordionTrigger className="text-sm hover:text-red-500" />

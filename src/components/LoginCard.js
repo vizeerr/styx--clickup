@@ -14,11 +14,11 @@ import toast from "react-hot-toast"
 import axios from "axios"
 import { useAppDispatch } from "@/lib/State/hooks"
 import { setAuthUser } from "@/lib/State/slices/authSlice"
-
+import { useRouter } from 'next/navigation'
 import { useToast } from "@/components/ui/use-toast"
 
   const LoginCard = () => {
-    
+    const router = useRouter()
     const dispatch = useAppDispatch();
     const [model,setModel] = useState(false);
     const [loginData,setLoginData] = useState({
@@ -45,6 +45,7 @@ import { useToast } from "@/components/ui/use-toast"
             if(response.status == 200){
                 dispatch(setAuthUser(response.data.data))
                 toast.success("Login Successfully")
+                router.push('/tasks')
             }
             
         } catch (error) {
@@ -147,7 +148,7 @@ import { useToast } from "@/components/ui/use-toast"
         </Card>
         </>):(<> <Card className="w-[500px] shadow-sm">
         <CardHeader>
-            <CardTitle>Login Here! </CardTitle>
+            <CardTitle>Please Login To Continue! </CardTitle>
         </CardHeader>
         <CardContent className="flex-col gap-4 flex">
             <div>
