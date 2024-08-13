@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// new db config
 export async function connect() {
   try {
     if (mongoose.connections[0].readyState) {
