@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import bcryptjs from 'bcryptjs';
-import { connect } from "@/lib/database/dbConfig";
+import { connect } from "@/lib/database/connect";
 import User from "@/lib/database/models/userModels";
 
 await connect(); // Ensure you await the connection

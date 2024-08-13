@@ -1,4 +1,4 @@
-import { connect } from "@/lib/database/dbConfig";
+import { connect } from "@/lib/database/connect";
 import Task from "@/lib/database/models/taskModels";
 import User from "@/lib/database/models/userModels";
 import { getUserToken } from "@/lib/getUserToken";
